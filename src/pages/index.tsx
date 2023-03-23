@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,14 +13,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
+      
+      <main className="flex flex-col justify-between items-center p-24 min-h-screen">
+        <div className="flex justify-between items-center text-[0.8rem] sm:text-[0.85rem] max-w-[var(--max-width)] w-full z-[2] [font-family:_var(--font-mono)]">
+          <p className='relative m-0 p-4 bg-[rgba(var(--callout-rgb),_0.5)] border border-solid border-[rgba(var(--callout-border-rgb),_0.3)] rounded-xl'>
             Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
+            <code className="font-bold [font-family:_var(--font-mono)]">src/pages/index.tsx</code>
           </p>
           <div>
             <a
+              className='flex items-center justify-center gap-2 p-4 sm:p-0'
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -30,7 +31,7 @@ export default function Home() {
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
-                className={styles.vercelLogo}
+                className="dark:invert"
                 width={100}
                 height={24}
                 priority
@@ -39,17 +40,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.center}>
+        <div className="center-logo">
           <Image
-            className={styles.logo}
+            className="relative dark:invert dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
             src="/next.svg"
             alt="Next.js Logo"
             width={180}
             height={37}
             priority
           />
-          <div className={styles.thirteen}>
+          <div className="relative flex justify-center items-center w-[75px] h-[75px] py-6 px-[10px] ml-4 [transform:_translateZ(0)] rounded-[var(--border-radius)] overflow-hidden shadow-[0px_2px_8px_-1px_#0000001a] before:content-[''] after:content-[''] before:absolute after:absolute before:-z-[1] after:-z-[1] before:animate-[rotate_6s_linear_infinite] before:w-[200%] before:h-[200%] before:[background:_var(--tile-border)] motion-reduce:before:animate-none after:inset-0 after:p-[1px] after:rounded-[var(--border-radius)] after:bg-gradient-to-br from-[rgba(var(--tile-start-rgb),_1)] to-[rgba(var(--tile-end-rgb),_1)] bg-clip-content">
             <Image
+              className='dark:invert dark:drop-shadow-[0_0_0.3rem_#ffffff70]'
               src="/thirteen.svg"
               alt="13"
               width={40}
@@ -59,59 +61,58 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.grid}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(4,_minmax(25%,_auto))] w-[var(--max-width)] max-w-xs sm:max-w-full mb-32 sm:mb-0 text-center sm:text-left">
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
+            className="group py-4 px-10 sm:px-5 rounded-[var(--border-radius)] [background:_rgba(var(--card-rgb),_0)] border border-solid border-[rgba(var(--card-border-rgb),_0)] [transition:_background_200ms,_border_200ms] hover:[background:_rgba(var(--card-rgb),_0.1)] hover:border-[rgba(var(--card-border-rgb),_0.15)]"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
+            <h2 className={`${inter.className} text-2xl font-semibold mb-2 sm:mb-3`}>
+              Docs <span className='inline-block transition-transform duration-200 group-hover:translate-x-1 motion-reduce:group-hover:transform-none'>-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={`${inter.className} m-0 opacity-60 text-[0.9rem] leading-6 max-w-[30ch]`}>
               Find in-depth information about Next.js features and&nbsp;API.
             </p>
           </a>
 
           <a
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            className="group py-4 px-10 sm:px-5 rounded-[var(--border-radius)] [background:_rgba(var(--card-rgb),_0)] border border-solid border-[rgba(var(--card-border-rgb),_0)] [transition:_background_200ms,_border_200ms] hover:[background:_rgba(var(--card-rgb),_0.1)] hover:border-[rgba(var(--card-border-rgb),_0.15)]"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
+            <h2 className={`${inter.className} text-2xl font-semibold mb-2 sm:mb-3`}>
+              Learn <span className="inline-block transition-transform duration-200 group-hover:translate-x-1 motion-reduce:group-hover:transform-none">-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={`${inter.className} m-0 opacity-60 text-[0.9rem] leading-6 max-w-[30ch]`}>
               Learn about Next.js in an interactive course with&nbsp;quizzes!
             </p>
           </a>
 
           <a
             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            className="group py-4 px-10 sm:px-5 rounded-[var(--border-radius)] [background:_rgba(var(--card-rgb),_0)] border border-solid border-[rgba(var(--card-border-rgb),_0)] [transition:_background_200ms,_border_200ms] hover:[background:_rgba(var(--card-rgb),_0.1)] hover:border-[rgba(var(--card-border-rgb),_0.15)]"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
+            <h2 className={`${inter.className} text-2xl font-semibold mb-2 sm:mb-3`}>
+              Templates <span className="inline-block transition-transform duration-200 group-hover:translate-x-1 motion-reduce:group-hover:transform-none">-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={`${inter.className} m-0 opacity-60 text-[0.9rem] leading-6 max-w-[30ch]`}>
               Discover and deploy boilerplate example Next.js&nbsp;projects.
             </p>
           </a>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            className="group py-4 px-10 sm:px-5 rounded-[var(--border-radius)] [background:_rgba(var(--card-rgb),_0)] border border-solid border-[rgba(var(--card-border-rgb),_0)] [transition:_background_200ms,_border_200ms] hover:[background:_rgba(var(--card-rgb),_0.1)] hover:border-[rgba(var(--card-border-rgb),_0.15)]"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
+            <h2 className={`${inter.className} text-2xl font-semibold mb-2 sm:mb-3`}>
+              Deploy <span className="inline-block transition-transform duration-200 group-hover:translate-x-1 motion-reduce:group-hover:transform-none">-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={`${inter.className} m-0 opacity-60 text-[0.9rem] leading-6 max-w-[30ch]`}>
               Instantly deploy your Next.js site to a shareable URL
               with&nbsp;Vercel.
             </p>
