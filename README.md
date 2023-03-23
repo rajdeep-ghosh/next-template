@@ -1,6 +1,6 @@
 # Next.js Template
 
-This is my next.js app template. It is a simple starter template that includes Next.js, TypeScript, Tailwind CSS, ESLint, and Prettier.
+This is my next.js template. It is a simple starter template that includes Next.js, TypeScript, Tailwind CSS, ESLint, and Prettier.
 
 ## Installation
 
