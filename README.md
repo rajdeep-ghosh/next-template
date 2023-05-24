@@ -20,10 +20,18 @@ This is my next.js template. It is a simple starter template that includes Next.
 
    ```bash
    yarn
+   # or
+   pnpm i
+   # or
+   npm i
    ```
 
 4. Run the development server:
 
    ```bash
    yarn dev
+   # or
+   pnpm dev
+   # or
+   npm run dev
    ```
