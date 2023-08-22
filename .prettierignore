@@ -5,11 +5,10 @@ node_modules
 
 # next.js
 /.next/
-/.vercel/
 /out/
 
 # production
 /build
 
-# compiled js functions
-/functions/lib/
+# vercel
+/.vercel/

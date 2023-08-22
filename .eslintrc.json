@@ -1,4 +1,5 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "tsconfig.json"
@@ -35,7 +36,27 @@
       {
         "pathGroups": [
           {
+            "pattern": "@styles/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@lib/env",
+            "group": "unknown",
+            "position": "after"
+          },
+          {
             "pattern": "@lib/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@app/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@pages/**",
             "group": "external",
             "position": "after"
           },
@@ -55,7 +76,8 @@
           "sibling",
           "index",
           "object",
-          "type"
+          "type",
+          "unknown"
         ]
       }
     ],
