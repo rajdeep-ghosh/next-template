@@ -1,4 +1,4 @@
-import '@styles/globals.css';
+import '@/styles/global.css';
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'Created using the Next template by Rajdeep Ghosh (https://github.com/rajdeep-ghosh/next-template)'
 };
 
-const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
+const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang='en'>
       <body>{children}</body>

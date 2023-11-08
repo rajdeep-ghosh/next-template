@@ -22,46 +22,37 @@
     }
   },
   "rules": {
-    "semi": ["error", "always"],
-    "curly": ["warn", "multi"],
-    "quotes": ["error", "single", { "avoidEscape": true }],
-    "jsx-quotes": ["error", "prefer-single"],
-    "linebreak-style": ["error", "unix"],
-    "no-console": "warn",
-    "comma-dangle": ["error", "never"],
-    "no-unused-expressions": "error",
-    "no-constant-binary-expression": "error",
     "import/order": [
       "warn",
       {
         "pathGroups": [
           {
-            "pattern": "@styles/**",
+            "pattern": "@/styles/**",
             "group": "external",
             "position": "before"
           },
           {
-            "pattern": "@lib/env",
+            "pattern": "@/lib/env",
             "group": "unknown",
             "position": "after"
           },
           {
-            "pattern": "@lib/**",
+            "pattern": "@/lib/**",
             "group": "external",
             "position": "after"
           },
           {
-            "pattern": "@app/**",
+            "pattern": "@/app/**",
             "group": "external",
             "position": "after"
           },
           {
-            "pattern": "@pages/**",
+            "pattern": "@/pages/**",
             "group": "external",
             "position": "after"
           },
           {
-            "pattern": "@components/**",
+            "pattern": "@/components/**",
             "group": "external",
             "position": "after"
           }
@@ -81,6 +72,14 @@
         ]
       }
     ],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "jsx-quotes": ["error", "prefer-single"],
+    "linebreak-style": ["error", "unix"],
+    "no-console": "warn",
+    "comma-dangle": ["error", "never"],
+    "no-unused-expressions": "error",
+    "no-constant-binary-expression": "error",
     "@typescript-eslint/no-misused-promises": [
       "error",
       {
@@ -90,7 +89,6 @@
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/consistent-type-imports": "warn",
-    "@typescript-eslint/prefer-nullish-coalescing": "warn",
-    "@typescript-eslint/explicit-function-return-type": "warn"
+    "@typescript-eslint/prefer-nullish-coalescing": "warn"
   }
 }
