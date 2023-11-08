@@ -5,10 +5,9 @@ name: CI
 
 on:
   push:
-    branches: ['main']
-
   pull_request:
-    branches: ['main']
+    branches:
+      - main
 
 jobs:
   prettier:
@@ -16,23 +15,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Download deps
-        run: yarn install --frozen-lockfile
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
 
       - name: Format
-        run: yarn format:check
+        run: pnpm run format:check
 
   eslint:
     name: ESLint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Download deps
-        run: yarn install --frozen-lockfile
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
 
       - name: Lint
-        run: yarn lint
+        run: pnpm run lint
