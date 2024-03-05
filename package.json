@@ -9,13 +9,14 @@
     "start": "next start",
     "lint": "next lint",
     "format:check": "prettier --check ./src",
+    "format:fix": "prettier --write ./src --ignore-unknown",
     "prepare": "husky install"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "next": "^14.0.1",
+    "next": "^14.1.2",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -27,7 +28,7 @@
     "@typescript-eslint/parser": "^6.2.1",
     "autoprefixer": "^10.4.14",
     "eslint": "^8",
-    "eslint-config-next": "^14.0.1",
+    "eslint-config-next": "^14.1.2",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.27.5",
