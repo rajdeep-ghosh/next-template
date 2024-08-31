@@ -2,7 +2,7 @@
   "name": "next-template",
   "version": "0.1.0",
   "private": true,
-  "author": "Rajdeep Ghosh <rajdeepghosh810@gmail.com>",
+  "author": "Rajdeep Ghosh <https://x.com/rajdeepghosh__>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,7 +16,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "next": "^14.1.2",
+    "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -24,11 +24,10 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^6.2.1",
-    "@typescript-eslint/parser": "^6.2.1",
-    "autoprefixer": "^10.4.14",
+    "@typescript-eslint/eslint-plugin": "^8",
+    "@typescript-eslint/parser": "^8",
     "eslint": "^8",
-    "eslint-config-next": "^14.1.2",
+    "eslint-config-next": "14.2.7",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.27.5",
@@ -36,9 +35,9 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "postcss": "^8",
-    "prettier": "^3.0.2",
-    "prettier-plugin-tailwindcss": "^0.5.3",
-    "tailwindcss": "^3.3.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5"
   }
 }

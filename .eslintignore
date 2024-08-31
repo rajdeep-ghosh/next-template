@@ -3,4 +3,4 @@ next.config.mjs
 
 # tailwind config
 tailwind.config.js
-postcss.config.js
+postcss.config.mjs
