@@ -11,11 +11,7 @@
     "lint:check": "eslint",
     "lint:fix": "eslint --fix ./src",
     "format:check": "prettier --check ./",
-    "format:fix": "prettier --write ./src --ignore-unknown",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "format:fix": "prettier --write ./src --ignore-unknown"
   },
   "dependencies": {
     "next": "15.5.4",
