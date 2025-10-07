@@ -1,10 +1,16 @@
 {
-  "editor.formatOnSave": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.quickSuggestions": {
+    "strings": "on"
   },
+  "editor.formatOnSave": true,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 120,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true
+  "files.trimFinalNewlines": true,
+  "[typescript][typescriptreact][javascript][javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
