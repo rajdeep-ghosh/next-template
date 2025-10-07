@@ -4,8 +4,8 @@
   "private": true,
   "author": "Rajdeep Ghosh <https://x.com/rajdeepghosh__>",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
     "start": "next start",
     "preview": "next build && next start",
     "lint": "next lint",
