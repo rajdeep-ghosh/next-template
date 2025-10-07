@@ -7,9 +7,9 @@ import type { Metadata } from 'next';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Next Js Template',
+  title: 'Next.js Template',
   description:
-    'Created using the Next template by Rajdeep Ghosh (https://github.com/rajdeep-ghosh/next-template)'
+    'Created using the Next.js template by @rajdeep-ghosh (https://github.com/rajdeep-ghosh/next-template)'
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
