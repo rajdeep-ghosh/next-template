@@ -8,7 +8,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "preview": "next build && next start",
-    "lint": "next lint",
+    "lint:check": "eslint",
+    "lint:fix": "eslint --fix ./src",
     "format:check": "prettier --check ./",
     "format:fix": "prettier --write ./src --ignore-unknown",
     "prepare": "husky install"
