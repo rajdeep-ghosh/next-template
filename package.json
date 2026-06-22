@@ -4,8 +4,8 @@
   "private": true,
   "author": "Rajdeep Ghosh <https://x.com/rajdeepghosh__>",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "preview": "next build && next start",
     "lint:check": "eslint",
@@ -14,9 +14,9 @@
     "format:fix": "prettier --write ./src --ignore-unknown"
   },
   "dependencies": {
-    "next": "15.5.4",
-    "react": "^19",
-    "react-dom": "^19"
+    "next": "16.2.9",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
@@ -26,7 +26,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.5.4",
+    "eslint-config-next": "16.2.9",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
