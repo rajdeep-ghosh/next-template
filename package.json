@@ -8,9 +8,9 @@
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start",
-    "lint:check": "eslint",
+    "lint": "eslint",
     "lint:fix": "eslint --fix ./src",
-    "format:check": "prettier --check ./",
+    "format": "prettier --check ./",
     "format:fix": "prettier --write ./src --ignore-unknown"
   },
   "dependencies": {
