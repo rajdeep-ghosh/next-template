@@ -3,10 +3,20 @@ import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
 import prettier from 'eslint-config-prettier/flat';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import tseslint from 'typescript-eslint';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  {
+    name: 'typescript-eslint',
+    extends: [tseslint.configs.recommendedTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        projectService: true
+      }
+    }
+  },
   {
     name: 'stylistic/eslint-plugin',
     plugins: {
@@ -30,6 +40,7 @@ const eslintConfig = defineConfig([
       'no-console': 'warn',
       'no-unused-expressions': 'error',
       'no-constant-binary-expression': 'error',
+      '@typescript-eslint/no-unused-expressions': 'error',
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/consistent-type-imports': 'warn',
