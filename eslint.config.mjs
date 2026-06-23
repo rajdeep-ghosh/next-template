@@ -1,32 +1,46 @@
-import { FlatCompat } from '@eslint/eslintrc';
+import stylistic from '@stylistic/eslint-plugin';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import prettier from 'eslint-config-prettier/flat';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname
-});
-
-const eslintConfig = [
-  ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
-    rules: {
-      semi: ['error', 'always'],
-      quotes: ['error', 'single', { avoidEscape: true }],
-      'jsx-quotes': ['error', 'prefer-single'],
-      'linebreak-style': ['error', 'unix'],
-      'no-console': 'error',
-      'comma-dangle': ['error', 'never'],
-      'no-unused-expressions': 'error',
-      'no-constant-binary-expression': 'error'
-    }
-  }),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
   {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'next-env.d.ts'
-    ]
-  }
-];
+    name: 'stylistic/eslint-plugin',
+    plugins: {
+      '@stylistic': stylistic
+    }
+  },
+  prettier,
+  {
+    name: 'stylistic rules',
+    rules: {
+      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
+      '@stylistic/jsx-quotes': ['error', 'prefer-single'],
+      '@stylistic/linebreak-style': ['error', 'unix'],
+      '@stylistic/comma-dangle': ['error', 'never']
+    }
+  },
+  {
+    name: 'custom rules',
+    rules: {
+      'no-console': 'warn',
+      'no-unused-expressions': 'error',
+      'no-constant-binary-expression': 'error',
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/consistent-type-imports': 'warn',
+      '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        { checksVoidReturn: { attributes: false } }
+      ]
+    }
+  },
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts'])
+]);
 
 export default eslintConfig;
